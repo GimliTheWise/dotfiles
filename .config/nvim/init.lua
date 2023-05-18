@@ -1,0 +1,2 @@
+require("gimli")
+print("hello")
