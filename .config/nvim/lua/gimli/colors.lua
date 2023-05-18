@@ -12,7 +12,7 @@ require('base16-colorscheme').setup({
 
 
 -- this is our single source of truth created above
-local base16_theme_fname = vim.fn.expand(vim.env.HOME..'/.config/.base16_theme')
+local base16_theme_fname = vim.fn.expand(vim.env.HOME..'/.base16_theme')
 -- this function is the only way we should be setting our colorscheme
 local function set_colorscheme(name)
     -- write our colorscheme back to our single source of truth
