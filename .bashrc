@@ -11,4 +11,4 @@ PS1='[\u@\h \W]\$ '
 alias vim="nvim"
 alias sudo="sudo " # make sudo check for aliases too
 complete -cf sudo
-alias dotfiles='/usr/bin/git --git-dir=/home/obiwan/.cfg/ --work-tree=/home/obiwan'
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
