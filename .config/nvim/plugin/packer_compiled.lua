@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/obiwan/.local/share/nvim/site/pack/packer/start/nvim-base16",
     url = "https://github.com/rrethy/nvim-base16"
   },
+  ["nvim-treesitter"] = {
+    loaded = true,
+    path = "/home/obiwan/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/obiwan/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -93,6 +98,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/obiwan/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  undotree = {
+    loaded = true,
+    path = "/home/obiwan/.local/share/nvim/site/pack/packer/start/undotree",
+    url = "https://github.com/mbbill/undotree"
   }
 }
 

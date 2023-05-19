@@ -1,2 +1,1 @@
 require("gimli")
-print("hello")
