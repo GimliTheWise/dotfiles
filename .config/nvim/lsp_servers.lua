@@ -1,3 +1,4 @@
+-- Available servers here: https://github.com/williamboman/mason-lspconfig.nvim
 return {
   -- clangd = {},
   -- gopls = {},
