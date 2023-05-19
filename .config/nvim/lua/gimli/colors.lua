@@ -13,6 +13,8 @@ require('base16-colorscheme').setup({
 
 -- this is our single source of truth created above
 local base16_theme_fname = vim.fn.expand(vim.env.HOME..'/.base16_theme')
+local source_dpath = vim.fn.expand(vim.env.HOME..'/.config/base16-kitty/colors/') 
+local destination_fname = vim.fn.expand(vim.env.HOME..'/.config/kitty/current-theme.conf')
 -- this function is the only way we should be setting our colorscheme
 local function set_colorscheme(name)
     -- write our colorscheme back to our single source of truth
@@ -21,14 +23,13 @@ local function set_colorscheme(name)
     vim.cmd('colorscheme '..name)
     -- execute `kitty @ set-colors -c <color>` to change terminal window's
     -- colors and newly created terminal windows colors
-    vim.loop.spawn('kitty', {
-        args = {
-            '@',
-            'set-colors',
-            '-c',
-            string.format(vim.env.HOME..'/.config/base16-kitty/colors/%s.conf', name)
-        }
-    }, nil)
+    local cpCommand = "cp " .. vim.fn.shellescape(source_dpath) .. name .. ".conf" .. " " .. vim.fn.shellescape(destination_fname)
+
+    -- Execute the cp command
+    os.execute(cpCommand)
+    -- reload kitty, alternative is ctrl+shift+f5
+    os.execute("pkill -USR1 -f kitty")
+
 end
 
 
