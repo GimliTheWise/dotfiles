@@ -1,8 +1,7 @@
-
 -- this is our single source of truth
-local base16_theme_fname = vim.fn.expand(vim.env.HOME..'/.base16_theme')
-local source_dpath = vim.fn.expand(vim.env.HOME..'/.config/base16-kitty/colors/') 
-local destination_fname = vim.fn.expand(vim.env.HOME..'/.config/kitty/current-theme.conf')
+local base16_theme_fname = vim.fn.expand(vim.env.HOME .. '/.base16_theme')
+local source_dpath = vim.fn.expand(vim.env.HOME .. '/.config/base16-kitty/colors/')
+local destination_fname = vim.fn.expand(vim.env.HOME .. '/.config/kitty/current-theme.conf')
 
 -- set theme on start of vim
 vim.cmd('colorscheme ' .. vim.fn.readfile(base16_theme_fname)[1])
@@ -10,18 +9,18 @@ vim.cmd('colorscheme ' .. vim.fn.readfile(base16_theme_fname)[1])
 -- this function is the only way we should be setting our colorscheme
 local function set_colorscheme(name)
     -- write our colorscheme back to our single source of truth
-    vim.fn.writefile({name}, base16_theme_fname)
+    vim.fn.writefile({ name }, base16_theme_fname)
     -- set Neovim's colorscheme
-    vim.cmd('colorscheme '..name)
+    vim.cmd('colorscheme ' .. name)
     -- execute `kitty @ set-colors -c <color>` to change terminal window's
     -- colors and newly created terminal windows colors
-    local cpCommand = "cp " .. vim.fn.shellescape(source_dpath) .. name .. ".conf" .. " " .. vim.fn.shellescape(destination_fname)
+    local cpCommand = "cp " ..
+    vim.fn.shellescape(source_dpath) .. name .. ".conf" .. " " .. vim.fn.shellescape(destination_fname)
 
     -- Execute the cp command
     os.execute(cpCommand)
     -- reload kitty, alternative is ctrl+shift+f5
     os.execute("pkill -USR1 -f kitty")
-
 end
 
 
