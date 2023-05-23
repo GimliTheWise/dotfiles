@@ -2,10 +2,9 @@
 return {
   -- clangd = {},
   -- gopls = {},
-  -- pyright = {},
+  --  pyright = {},
   -- rust_analyzer = {},
   -- tsserver = {},
-  jedi_language_server = {},
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },
@@ -13,4 +12,3 @@ return {
     },
   },
 }
-
