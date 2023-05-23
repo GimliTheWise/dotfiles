@@ -1,0 +1,40 @@
+@import "mocha.css";
+
+* {
+  font-family: FantasqueSansMono Nerd Font;
+  font-size: 20px;
+  min-height: 0;
+}
+
+
+window#waybar {
+  background: transparent;
+}
+
+
+#clock {
+  color: @lavender;
+}
+
+#battery {
+  color: @green;
+}
+#battery.charging {
+  color: @green;
+}
+#battery.warning:not(.charging) {
+  color: @red;
+}
+
+#network {
+    color: @flamingo;
+}
+#backlight {
+  color: @yellow;
+}
+#wireplumber {
+  color: @pink;
+}
+#wireplumber.muted {
+  color: @red;
+}
