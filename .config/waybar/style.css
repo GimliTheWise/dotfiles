@@ -1,139 +1,57 @@
-
 @import "mocha.css";
 
 * {
-  /* `otf-font-awesome` is required to be installed for icons */
   font-family: JetBrainsMono Nerd Font;
-  font-size: 17px;
-  border-radius: 17px;
+  font-size: 13px;
+  border-radius: 10px; /* rounding on edges */
 }
-
+ 
 #clock,
-#memory,
 #network,
-#custom-spotify,
 #wireplumber,
 #battery,
-#window {
-  padding: 5 15px;
-  border-radius: 12px;
-  background: rgba(30, 30, 46, 0.6);
-  color: rgb(180, 190, 254);
-  box-shadow: rgba(17, 17, 27, 0.2) 0 0 3 2px;
-  margin-top: 8px;
-  margin-bottom: 8px;
-  margin-right: 2px;
-  margin-left: 2px;
-  transition: all 0.3s ease;
-}
-
-#window {
-  background-color: transparent;
-  box-shadow: none;
-}
-
-window#waybar {
-  background-color: rgba(0, 0, 0, 0.096);
-  /* background-color: rgb(255, 255, 255); */
-  border-radius: 17px;
-}
-
-window * {
-  background-color: transparent;
-  border-radius: 17px;
-}
-
-#workspaces button label {
-  color: rgb(180, 190, 254);
-}
-
-#workspaces button.active label {
-  color: rgba(30, 30, 46, 0.6);
-  font-weight: bolder;
-}
-
-#workspaces button:hover {
-  box-shadow: rgb(180, 190, 254) 0 0 0 1.5px;
-  min-width: 50px;
-}
-
-#workspaces {
-  background-color: transparent;
-  border-radius: 17px;
-  padding: 5 0px;
-  margin-top: 3px;
-  margin-bottom: 3px;
-}
-
-#workspaces button {
-  box-shadow: rgba(17, 17, 27, 0.2) 0 0 3 2px;
-  background-color: rgba(30, 30, 46, 0.6);
-  border-radius: 12px;
-  margin-left: 10px;
-
-  transition: all 0.3s ease;
-}
-
-#workspaces button.active {
-  min-width: 50px;
-  box-shadow: rgba(0, 0, 0, 0.288) 2 2 5 2px;
-  background-color: rgb(245, 194, 231);
-  background-size: 400% 400%;
-  transition: all 0.3s ease;
-  background: linear-gradient(
-    58deg,
-    #cba6f7,
-    #f38ba8,
-    #eba0ac,
-    #fab387,
-    #f9e2af,
-    #a6e3a1,
-    #94e2d5
-  );
-  background-size: 300% 300%;
-  animation: colored-gradient 10s ease infinite;
-}
-
-@keyframes colored-gradient {
-  0% {
-    background-position: 71% 0%;
-  }
-  50% {
-    background-position: 30% 100%;
-  }
-  100% {
-    background-position: 71% 0%;
-  }
-}
-
-#custom-spotify {
-  margin-left: 2px;
+#memory,
+#custom-spotify,
+#window{
   padding-left: 15px;
   padding-right: 15px;
-  padding-top: 3px;
-  color: rgba(180, 190, 254, 0.329);
-  background-color: rgba(30, 30, 46, 0.6);
-  box-shadow: rgba(17, 17, 27, 0.2) 0 0 3 2px;
-  transition: all 0.3s ease;
-}
 
+  border-radius: 8px;
+  background: @base;
+  color: @text;
+}
+#window {
+  background-color: transparent;
+}
+#clock {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+window#waybar {
+  background-color: rgba(0, 0, 0, 0.096);
+  border-radius: 0;
+  /* border-radius: 17px; */
+}
+#custom-spotify {
+  color: @subtext0;
+  background-color: @crust;
+}
 #custom-spotify.playing {
-  color: rgb(180, 190, 254);
-  background: rgba(30, 30, 46, 0.6);
+  color: @text;
+  background: @base;
   background: linear-gradient(
     90deg,
-    rgb(49, 50, 68),
-    rgba(30, 30, 46, 0.6),
-    rgba(30, 30, 46, 0.6),
-    rgba(30, 30, 46, 0.6),
-    rgba(30, 30, 46, 0.6),
-    rgb(49, 50, 68)
+    @lavender,
+    @base,
+    @base,
+    @base,
+    @base,
+    @lavender
   );
   background-size: 400% 100%;
   animation: grey-gradient 3s linear infinite;
   transition: all 0.3s ease;
 }
-
 @keyframes grey-gradient {
   0% {
     background-position: 100% 50%;
@@ -142,8 +60,6 @@ window * {
     background-position: -33% 50%;
   }
 }
-
-
 #wireplumber.muted {
   color: @pink;
 }
@@ -156,9 +72,27 @@ window * {
 #battery.warning:not(.charging) {
   color: @red;
 }
+#battery.critical:not(.charging) {
+  color: @red;
+}
+#workspaces {
+  border-radius: 8px;
+}
+#workspaces button label {
+  color: @subtext0;
+  border-radius: 4px;
+}
+#workspaces button.active {
+  background-color: @crust;
+  min-width: 30px;
 
-#clock {
-  margin-right: 10px;
-  border-radius: 12px;
+}
+#workspaces button.active label {
+  color: @text;
+  font-weight: bolder;
+}
+#workspaces button:hover {
+  min-width: 50px;
+  background: @mantle;
 }
 

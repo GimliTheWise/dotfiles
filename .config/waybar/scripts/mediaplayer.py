@@ -32,6 +32,8 @@ def on_play(player, status, manager):
     logger.info('Received new playback status')
     on_metadata(player, player.props.metadata, manager)
 
+def escape_markup(text):
+    return text.replace("&", "&amp;")
 
 def on_metadata(player, metadata, manager):
     logger.info('Received new metadata')
@@ -42,9 +44,9 @@ def on_metadata(player, metadata, manager):
             ':ad:' in player.props.metadata['mpris:trackid']:
         track_info = 'AD PLAYING'
     elif player.get_artist() != '' and player.get_title() != '':
-        track_info = '{title}'.format(title=player.get_title())
+        track_info = '{title}'.format(title=escape_markup(player.get_title()))
     else:
-        track_info = player.get_title()
+        track_info = escape_markup(player.get_title())
 
     if player.props.status != 'Playing' and track_info:
         write_output(track_info, player, 'paused')
