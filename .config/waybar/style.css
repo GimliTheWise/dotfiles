@@ -23,10 +23,10 @@
 #window {
   background-color: transparent;
 }
-#clock {
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
-}
+/* #clock { */
+/*   border-top-right-radius: 0px; */
+/*   border-bottom-right-radius: 0px; */
+/* } */
 window#waybar {
   background-color: transparent;
   border-radius: 0;
@@ -76,9 +76,11 @@ window#waybar {
 }
 #workspaces {
   background-color: @base;
+  border-radius: 4px;
 }
 #workspaces button {
   background-color: @base;
+  border-radius: 4px;
 }
 #workspaces button label {
   color: @text;
