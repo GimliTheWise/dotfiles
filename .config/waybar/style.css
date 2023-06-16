@@ -26,6 +26,8 @@
 }
 #window {
   background-color: transparent;
+  border: none;
+  border-bottom: 1.5px solid @lavender;
 }
 /* #clock { */
 /*   border-top-right-radius: 0px; */
