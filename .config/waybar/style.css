@@ -40,6 +40,8 @@ window#waybar {
 #custom-spotify {
   color: @subtext0;
   background-color: @crust;
+  border-radius: 4px;
+  border: 1.5px solid @lavender;
 }
 #custom-spotify.playing {
   color: @text;
