@@ -13,5 +13,8 @@ configuration{
     sidebar-mode: true;
 }
 
-@theme "catppuccin-mocha"
+//@theme "catppuccin-mocha"
 
+//@theme "/home/obiwan/.local/share/rofi/themes/catppuccin-latte.rasi"
+//@theme "/home/obiwan/.local/share/rofi/themes/catppuccin-frappe.rasi"
+@theme "/home/obiwan/.local/share/rofi/themes/catppuccin-mocha.rasi"
