@@ -1,6 +1,5 @@
 configuration{
-    modi: "run,drun,window";
-    icon-theme: "Oranchelo";
+    modi: "drun,window,powermenu:~/.config/rofi/scripts/rofi-power-menu";
     show-icons: true;
     terminal: "kitty";
     drun-display-format: "{icon} {name}";
@@ -9,8 +8,8 @@ configuration{
     hide-scrollbar: true;
     display-drun: "  Apps ";
     display-run: "   Run ";
-    display-window: "   Window";
-    display-Network: " 󰤨  Network";
+    display-window: "   Window ";
+    display-powermenu: " 󰐦 Power Menu ";
     sidebar-mode: true;
 }
 
