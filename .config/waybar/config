@@ -48,7 +48,8 @@
     },
     "wireplumber": {
     "on-click": "helvum",
-    // "scroll-step": 1, // %, can be a float
+    "on-scroll-up": "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+",
+    "on-scroll-down": "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-",
     "format": "{icon} {volume}%",
     "format-bluetooth": "{volume}%  {format_source}",
     "format-bluetooth-muted": "muted ",
