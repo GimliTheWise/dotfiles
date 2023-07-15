@@ -1,8 +1,10 @@
 -- Available servers here: https://github.com/williamboman/mason-lspconfig.nvim
 return {
-  -- clangd = {},
+  clangd = {},
+  -- clang-format = {}, # doesn't work because of "-"
+  -- codelldb = {},
   -- gopls = {},
-  --  pyright = {},
+  pyright = {},
   -- rust_analyzer = {},
   -- tsserver = {},
   lua_ls = {
