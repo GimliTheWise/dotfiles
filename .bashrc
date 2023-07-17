@@ -9,6 +9,7 @@ alias ls='ls --color=auto'
 alias la='ls -la'
 alias grep='grep --color=auto'
 alias pacman='pacman --color=auto'
+alias paru='paru --color=auto'
 PS1='[\u@\h \W]\$ '
 alias vim="nvim"
 alias sudo="sudo " # make sudo check for aliases too

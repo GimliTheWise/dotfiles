@@ -7,6 +7,7 @@ return {
   pyright = {},
   -- rust_analyzer = {},
   -- tsserver = {},
+  bashls = {}, -- and shellcheck
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },
