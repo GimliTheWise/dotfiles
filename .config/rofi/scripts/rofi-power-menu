@@ -37,7 +37,7 @@ icons[shutdown]="󰐥"
 icons[cancel]="󰜺"
 
 declare -A actions
-actions[lockscreen]="~/.config/hypr/scripts/wayland-lock"
+actions[lockscreen]="$HOME/.config/hypr/scripts/wayland-lock"
 #actions[switchuser]="???"
 actions[logout]="loginctl terminate-session $XDG_SESSION_ID"
 actions[suspend]="systemctl suspend"

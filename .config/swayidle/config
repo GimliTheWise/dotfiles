@@ -1,0 +1,4 @@
+timeout 300 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on'
+timeout 305 'bash ~/.config/hypr/scripts/wayland-lock'
+before-sleep 'bash ~/.config/hypr/scripts/wayland-lock'
+
