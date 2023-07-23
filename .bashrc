@@ -13,7 +13,7 @@ alias paru='paru --color=auto'
 PS1='[\u@\h \W]\$ '
 alias vim="nvim"
 alias sudo="sudo " # make sudo check for aliases too
-alias mc="ranger"
+alias mc="source ranger" # use /bin/ranger so that q exits to current dir
 complete -cf sudo
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 export PATH=$HOME/.local/bin:$PATH
