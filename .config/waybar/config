@@ -9,7 +9,7 @@
     "margin-right": 10,
     "margin-left": 10,
     // Choose the order of the modules
-    "modules-left": ["wlr/workspaces", "custom/spotify"],
+    "modules-left": ["hyprland/workspaces", "custom/spotify"],
     "modules-center": ["hyprland/window"],
     "modules-right": ["memory","wireplumber", "network", "battery", "clock"],
     // Modules configuration
@@ -81,7 +81,7 @@
     "on-click": "kitty -e btop",
     "tooltip": false
   },
-  "wlr/workspaces": {
+  "hyprland/workspaces": {
     "on-click": "activate",
     "on-scroll-up": "hyprctl dispatch workspace e-1",
     "on-scroll-down": "hyprctl dispatch workspace e+1",
