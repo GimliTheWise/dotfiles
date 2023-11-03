@@ -37,4 +37,7 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-eval `ssh-agent -t 420m`
+
+/usr/bin/keychain  --noask --nogui --agents ssh -Q -q --timeout 420 $HOME/.ssh/id_ed25519
+[ -f $HOME/.keychain/$HOSTNAME-sh ] && source $HOME/.keychain/$HOSTNAME-sh
+
