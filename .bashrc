@@ -16,7 +16,7 @@ alias sudo="sudo " # make sudo check for aliases too
 alias mc="source ranger" # use /bin/ranger so that q exits to current dir
 complete -cf sudo
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-export PATH=$HOME/.local/bin:/opt/cuda/bin:$PATH
+export PATH=$HOME/.local/bin:/opt/cuda/bin:$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH
 export EDITOR=/usr/bin/nvim
 export VISUAL=/usr/bin/nvim
 #PS1="\n\[\033[1;37m\]\342\224\214($(if [[ ${EUID} == 0 ]]; then echo '\[\033[01;31m\]\h'; else echo '\[\033[01;34m\]\u@\h'; fi)\[\033[1;37m\])\342\224\200(\$(if [[ \$? == 0 ]]; then echo \"\[\033[01;32m\]\342\234\223\"; else echo \"\[\033[01;31m\]\342\234\227\"; fi)\[\033[1;37m\])\342\224\200(\[\033[1;34m\]\@ \d\[\033[1;37m\])\[\033[1;37m\]\n\342\224\224\342\224\200(\[\033[1;32m\]\w\[\033[1;37m\])\342\224\200(\[\033[1;32m\]\$(ls -1 | wc -l | sed 's: ::g') files, \$(ls -sh | head -n1 | sed 's/total //')b\[\033[1;37m\])\342\224\200> \[\033[0m\]"
@@ -37,4 +37,4 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
+eval `ssh-agent -t 420m`
