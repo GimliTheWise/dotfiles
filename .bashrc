@@ -41,3 +41,4 @@ unset __conda_setup
 /usr/bin/keychain  --noask --nogui --agents ssh -Q -q --timeout 420 $HOME/.ssh/id_ed25519
 [ -f $HOME/.keychain/$HOSTNAME-sh ] && source $HOME/.keychain/$HOSTNAME-sh
 
+[[ "$TERM" == "xterm-kitty" ]] && alias ssh="TERM=xterm-256color ssh"
