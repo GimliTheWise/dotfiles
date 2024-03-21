@@ -13,9 +13,18 @@ alias paru='paru --color=auto'
 PS1='[\u@\h \W]\$ '
 alias vim="nvim"
 alias sudo="sudo " # make sudo check for aliases too
-alias mc="source ranger" # use /bin/ranger so that q exits to current dir
+# alias mc="source ranger" # use /bin/ranger so that q exits to current dir
+function mc() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
 complete -cf sudo
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dotfiles='/usr/bin/git --git-dir=$HOME/projects/dotfiles/ --work-tree=$HOME'
 export PATH=$HOME/.local/bin:/opt/cuda/bin:$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH
 export EDITOR=/usr/bin/nvim
 export VISUAL=/usr/bin/nvim

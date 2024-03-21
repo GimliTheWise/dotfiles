@@ -38,7 +38,7 @@ elif [ "$new_brightness" -gt "$max_brightness" ]; then
 fi
 
 # Write the new value
-echo "$new_brightness" > "$BRIGHTNESS"
+echo "$new_brightness" | sudo tee "$BRIGHTNESS"
 
 echo "New brightness value set to: $new_brightness"
 exit 0
