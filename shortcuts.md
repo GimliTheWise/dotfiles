@@ -40,7 +40,7 @@ Vim navigation | Ex. search with /
 
 - List Installed pacman packages: `pacman -Qqe | grep -v "$(pacman -Qqm)"`
 - List Installed pacman packages: `pacman -Qqm`
-
+- view storage usage with ncdu
 # Yazi
 | Description | shortcut |
 | -------- | ------- |
